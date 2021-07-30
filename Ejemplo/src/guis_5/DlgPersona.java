@@ -7,6 +7,7 @@ import java.awt.EventQueue;
 
 import javax.swing.JButton;
 import javax.swing.JDialog;
+import javax.swing.JInternalFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
@@ -15,7 +16,7 @@ import javax.swing.table.TableColumnModel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class DlgPersona extends JDialog implements ActionListener {
+public class DlgPersona extends JInternalFrame implements ActionListener {
 	
 	private JScrollPane scrollPane;
 	private JButton btnAdicionar;
@@ -47,6 +48,9 @@ public class DlgPersona extends JDialog implements ActionListener {
 	 * Create the dialog.
 	 */
 	public DlgPersona() {
+		setMaximizable(true);
+		setIconifiable(true);
+		setClosable(true);
 		setResizable(false);
 		setTitle("Mantenimiento | Persona");
 		setBounds(100, 100, 810, 610);

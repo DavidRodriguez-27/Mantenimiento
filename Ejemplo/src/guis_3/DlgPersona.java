@@ -9,6 +9,7 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
+import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
@@ -23,7 +24,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseEvent;
 
-public class DlgPersona extends JDialog implements ActionListener, KeyListener, MouseListener {
+public class DlgPersona extends JInternalFrame implements ActionListener, KeyListener, MouseListener {
 	
 	private JLabel lblCodigo;
 	private JLabel lblNombre;
@@ -67,6 +68,9 @@ public class DlgPersona extends JDialog implements ActionListener, KeyListener, 
 	 * Create the dialog.
 	 */
 	public DlgPersona() {
+		setMaximizable(true);
+		setIconifiable(true);
+		setClosable(true);
 		setResizable(false);
 		setTitle("Mantenimiento | Persona");
 		setBounds(100, 100, 810, 610);
