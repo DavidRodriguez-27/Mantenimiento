@@ -1,0 +1,5 @@
+1001;Juan Prado Salazar;07557853;82.3;1.75;3
+1002;Pedro Romero Soto;11002348;79.5;1.58;1
+1003;Luis Pinto Garza;62279345;82.7;1.83;0
+1004;Daniel Rojas Saenz;20977241;47.2;1.72;2
+1005;Jorge Espinal Vega;06377845;64.9;1.88;1
