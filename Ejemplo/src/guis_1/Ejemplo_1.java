@@ -26,6 +26,8 @@ public class Ejemplo_1 extends JFrame implements ActionListener {
 	private JMenu mnMantenimiento;
 	private JMenuItem mntmPersona;
 	private JDesktopPane desktopPane;
+	private JMenu mnNewMenu;
+	private JMenuItem mntmNewMenuItem;
 
 	/**
 	 * Launch the application.
@@ -71,6 +73,13 @@ public class Ejemplo_1 extends JFrame implements ActionListener {
 		mntmPersona = new JMenuItem("Persona");
 		mntmPersona.addActionListener(this);
 		mnMantenimiento.add(mntmPersona);
+		
+		mnNewMenu = new JMenu("Consultar");
+		menuProyecto.add(mnNewMenu);
+		
+		mntmNewMenuItem = new JMenuItem("Alumnos");
+		mntmNewMenuItem.addActionListener(this);
+		mnNewMenu.add(mntmNewMenuItem);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
@@ -109,6 +118,9 @@ public class Ejemplo_1 extends JFrame implements ActionListener {
 	}
 
 	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == mntmNewMenuItem) {
+			actionPerformedMntmNewMenuItem(e);
+		}
 		if (e.getSource() == mntmPersona) {
 			actionPerformedMntmPersona(e);
 		}
@@ -133,5 +145,13 @@ public class Ejemplo_1 extends JFrame implements ActionListener {
         frm.setLocation((desktopSize.width-FrameSize.width)/2,(desktopSize.height-FrameSize.height)/2);
         frm.setVisible(true); // lo hacemos visible
 	}
-	
+	protected void actionPerformedMntmNewMenuItem(ActionEvent e) {
+		frmAlumno frm = new frmAlumno();
+		desktopPane.add(frm); 
+		Dimension desktopSize = desktopPane.getSize();
+        Dimension FrameSize = frm.getSize();
+        frm.setLocation((desktopSize.width-FrameSize.width)/2,(desktopSize.height-FrameSize.height)/2);
+        frm.setVisible(true); // lo hacemos visible
+		
+	}
 }
