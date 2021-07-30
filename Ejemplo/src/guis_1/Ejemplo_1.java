@@ -35,6 +35,7 @@ public class Ejemplo_1 extends JFrame implements ActionListener {
 			public void run() {
 				try {
 					Ejemplo_1 frame = new Ejemplo_1();
+					frame.setExtendedState(MAXIMIZED_BOTH);
 					frame.setVisible(true);
 				}
 				catch (Exception e) {
