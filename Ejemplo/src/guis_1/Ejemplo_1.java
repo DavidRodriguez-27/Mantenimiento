@@ -16,6 +16,7 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.awt.event.ActionEvent;
 import javax.swing.JDesktopPane;
+import javax.swing.ImageIcon;
 
 public class Ejemplo_1 extends JFrame implements ActionListener {
 
@@ -61,23 +62,29 @@ public class Ejemplo_1 extends JFrame implements ActionListener {
 		setJMenuBar(menuProyecto);
 		
 		mnArchivo = new JMenu("Archivo");
+		mnArchivo.setIcon(new ImageIcon(Ejemplo_1.class.getResource("/imagenes/apps.png")));
 		menuProyecto.add(mnArchivo);
 		
 		mntmSalir = new JMenuItem("Salir");
+		mntmSalir.setIcon(new ImageIcon(Ejemplo_1.class.getResource("/imagenes/undo.png")));
 		mntmSalir.addActionListener(this);
 		mnArchivo.add(mntmSalir);
 		
 		mnMantenimiento = new JMenu("Mantenimiento");
+		mnMantenimiento.setIcon(new ImageIcon(Ejemplo_1.class.getResource("/imagenes/proceso.png")));
 		menuProyecto.add(mnMantenimiento);
 		
 		mntmPersona = new JMenuItem("Persona");
+		mntmPersona.setIcon(new ImageIcon(Ejemplo_1.class.getResource("/imagenes/user.png")));
 		mntmPersona.addActionListener(this);
 		mnMantenimiento.add(mntmPersona);
 		
 		mnNewMenu = new JMenu("Consultar");
+		mnNewMenu.setIcon(new ImageIcon(Ejemplo_1.class.getResource("/imagenes/consulta.png")));
 		menuProyecto.add(mnNewMenu);
 		
 		mntmNewMenuItem = new JMenuItem("Alumnos");
+		mntmNewMenuItem.setIcon(new ImageIcon(Ejemplo_1.class.getResource("/imagenes/users.png")));
 		mntmNewMenuItem.addActionListener(this);
 		mnNewMenu.add(mntmNewMenuItem);
 		contentPane = new JPanel();
